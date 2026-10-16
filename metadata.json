@@ -1,0 +1,7 @@
+
+{
+  "name": "Smart School App",
+  "description": "A highly polished, multi-user SaaS School Portal and Attendance System featuring dual-calendar tracking, robust grade rosters, secure report cards, and automated notifications.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

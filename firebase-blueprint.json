@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "Student": {
+      "title": "Student",
+      "description": "Student record in Delijent school",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 256 },
+        "grade": { "type": "string", "maxLength": 32 },
+        "section": { "type": "string", "maxLength": 32 },
+        "gender": { "type": "string", "maxLength": 16 },
+        "parentPhone": { "type": "string", "maxLength": 64 },
+        "qrCode": { "type": "string", "maxLength": 128 },
+        "feesPaid": { "type": "number" },
+        "totalFee": { "type": "number" }
+      },
+      "required": ["id", "name", "grade"]
+    },
+    "Teacher": {
+      "title": "Teacher",
+      "description": "Teacher record in Delijent school",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 256 },
+        "email": { "type": "string", "maxLength": 256 },
+        "phone": { "type": "string", "maxLength": 64 },
+        "subject": { "type": "string", "maxLength": 128 },
+        "gradeLevel": { "type": "string", "maxLength": 128 },
+        "isHomeroomTeacher": { "type": "boolean" }
+      },
+      "required": ["id", "name"]
+    }
+  },
+  "firestore": {
+    "/students/{studentId}": {
+      "schema": "Student",
+      "description": "Collection of student records"
+    },
+    "/teachers/{teacherId}": {
+      "schema": "Teacher",
+      "description": "Collection of teacher records"
+    }
+  }
+}
